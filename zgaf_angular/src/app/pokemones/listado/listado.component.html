@@ -1,0 +1,14 @@
+<h1>Lista de pokemon</h1>
+
+<button (click)="borrarPokemon()">Borrar</button>
+
+<h3>Pokemon Eliminado</h3>
+
+<span>{{ PkmElminado }}</span>
+
+<ul>
+  <!--let i of array-->
+  <li *ngFor="let pokemon of pokemones; let i = index">
+    {{ i + 1 }}-{{ pokemon }}
+  </li>
+</ul>

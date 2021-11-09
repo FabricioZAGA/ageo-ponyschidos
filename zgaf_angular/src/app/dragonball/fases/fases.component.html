@@ -1,0 +1,19 @@
+<h1>Fases de Goku</h1>
+
+<button (click)="cambiarFase()" class="button">Cambiar de Fase</button>
+
+<h3>Fase Actual:</h3>
+
+<span>{{ faseActual }}</span>
+
+<ul>
+  <li *ngFor="let fase of fases; let i = index">{{ i + 1 }}-{{ fase }}</li>
+</ul>
+
+<div [ngSwitch]="faseActual">
+  <div *ngSwitchCase="'Saiyajin'">Negro</div>
+  <div *ngSwitchCase="'Super Saiyajin'">Amarillo</div>
+  <div *ngSwitchCase="'Super Sayaijin Dios'">Rojo</div>
+  <div *ngSwitchCase="'Super Saiyajin Azul'">Azul</div>
+  <div *ngSwitchCase="'Ultra Instinct'">Blanco</div>
+</div>
